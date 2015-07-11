@@ -4,8 +4,8 @@
 @stop
 @section('content')
     <div class="blog-header">
-        <h1 class="blog-title">Titulo da postagem</h1>
-        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+        <h1 class="blog-title">{{$posts['tituloBlog']}}</h1>
+        <p class="lead blog-description">{{$posts['descricaoBlog']}}</p>
     </div>
 
     <div class="row">
@@ -13,10 +13,10 @@
         <div class="col-sm-8 blog-main">
 
             <div class="blog-post">
-                <h2 class="blog-post-title">Sample blog post</h2>
-                <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+                <h2 class="blog-post-title">{{$posts['tituloPostagem']}}</h2>
+                <p class="blog-post-meta">{{$posts['data']}}<a href="#">{{$posts['autor']}}</a></p>
                 <hr>
-                <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                <p>{{$posts['conteudo']}}</p>
 
             </div><!-- /.blog-post -->
 
@@ -28,7 +28,6 @@
             {{--</nav>--}}
 
         </div><!-- /.blog-main -->
-
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
             <div class="sidebar-module sidebar-module-inset">
                 <h4>About</h4>
